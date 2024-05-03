@@ -10,7 +10,6 @@ class CustomArrayListTest {
     void test_Get_Index_Out_Of_Bounds_Exception() {
         CustomArrayList<String> customArrayList = new CustomArrayList<>();
         customArrayList.add("Test1");
-  //  assertThrows(IndexOutOfBoundsException.class, customArrayList.get(-1));
         assertThrows(IndexOutOfBoundsException.class, () -> customArrayList.get(-1));
     }
     @Test
@@ -26,7 +25,6 @@ class CustomArrayListTest {
     }
     @Test
     public void test_Add_Item() {
-        // This test case will test the functionality to add an item that is not null into the list.
         CustomArrayList<String> list = new CustomArrayList<>();
         assertTrue(list.add("Item 1"));
         assertEquals(1, list.getSize());
