@@ -36,29 +36,27 @@ public class CustomListApplication {
         myCustomList.add("element 30");
         myCustomList.add("element 31");
         myCustomList.add("element 32");
-        myCustomList.add("element 33");
-        myCustomList.add("element 34");
-        myCustomList.add("element 35");
-        myCustomList.add("element 36");
+        myCustomList.add("chicken 33");
+        myCustomList.add("cow 34");
+        myCustomList.add("pig 35");
+        myCustomList.add("horse 36");
         myCustomList.add("element 37");
         myCustomList.add("element 38");
         myCustomList.add("element 39");
         myCustomList.add("element 40");
         myCustomList.add("element 41");
 
-
-
-
-        //System.out.println(myCustomList.getSize());
-
-        //myCustomList.getSize();
         // then you should validate that all the elements you've inserted actually exist in your data structure
+
+        myCustomList.remove(33);
+        myCustomList.add(33,"bull 34");
         for (int i = 0; i < myCustomList.getSize(); i++) {
             System.out.println(myCustomList.get(i));
-
         }
-        //	System.out.println("Number of items in the array: " + myCustomList.getSize());
+
+        // remove 'cow 34' from the list
 
 
     }
+
 }
