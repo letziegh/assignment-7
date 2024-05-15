@@ -50,14 +50,21 @@ public class CustomArrayList<T> implements CustomList<T> {
         return (T) items[index];
     }
 
+
+
     @Override
     public T remove(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
         T item = (T) items[index];
-        System.arraycopy(items, index + 1, items, index, size - index - 1);
-        size--;
+        // Shift elements to the left
+        for (int i = index; i < size - 1; i++) {
+           items[i] = items[i + 1];
+            System.out.println("Shifting element at index " + (i + 1) + " to index " + i + ": " + items[i]);
+        }
+        items[size - 1] = null; // Set the last element to null
+        size--; // Decrease the size
         return item;
     }
 }

@@ -33,5 +33,27 @@ class CustomArrayListTest {
         assertEquals("Item 1", list.get(0));
     }
 
+    /**
+     * Test to ensure a value added to the CustomArrayList can be retrieved using the 'get' method.
+     */
+    @Test
+    public void get_Value() {
+        CustomArrayList<String> customList = new CustomArrayList<>();
+        customList.add("Test");
+
+        String result = customList.get(0);
+
+        assertEquals("Test", result);
+    }
+    @Test
+    public void test_get_size_after_adding_elements() {
+        CustomArrayList<Integer> list = new CustomArrayList<>();
+        list.add(1);
+        list.add(2);
+        int result = list.getSize();
+        assertEquals(2, result, "Expected size after adding two elements to be 2");
+    }
+
+
 
 }
